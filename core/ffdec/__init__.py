@@ -2,6 +2,8 @@ import os
 import sys
 import jpype
 
+from ..exceptions.ffdec import JavaNotFoundException
+
 __all__ = []
 
 PLAYERGLOBAL = os.path.abspath(os.path.join(os.path.dirname(__file__), "playerglobal32_0.swc"))
@@ -39,10 +41,6 @@ else:
     pass
 
 if jvmpath is None:
-    raise ImportError("Java not found!")
+    raise JavaNotFoundException("Java not found!")
 
 jpype.startJVM(jvmpath, "-Xmx512m", "-Xms32m", classpath=[FFDEC_LIB, CMYKJPEG_LIB, JL_LIB])
-
-
-
-from .classes import *

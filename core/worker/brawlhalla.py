@@ -6,7 +6,7 @@ from .config import ModloaderCoreConfig
 
 from ..utils.hash import HashFile
 from ..ffdec.classes import ArrayList, Configuration, HighlightedTextWriter, ScriptExportMode
-from ..swf import Swf
+from ..swf.swf import Swf
 
 __all__ = ["BRAWLHALLA_PATH", "BRAWLHALLA_SWFS", "BRAWLHALLA_FILES", "BRAWLHALLA_VERSION"]
 

@@ -1,7 +1,7 @@
 import threading
 
 from .basedispatch import BaseDispatch, Index
-from .variables import *
+from .variables import SetModsPath, SetModsSourcesPath
 from .modloader import ModLoader
 from .basemod import InstallBaseMod
 
